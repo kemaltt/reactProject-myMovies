@@ -6,7 +6,7 @@ export default function CardList(props) {
   return (
     <div className="card-container">
       {props.moviesList.map((movie) => (
-        <div className="card">
+        <div className="card" key={movie.id}>
           <h5 className="card-title">{movie.title}</h5>
 
           <div className="card-body">

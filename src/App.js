@@ -7,10 +7,12 @@ import axios from "axios";
 export default class App extends Component {
   state = {
     moviesList: [],
+    searchQuery: "",
   };
 
   handleFormSubmit = (value) => {
     console.log(value);
+    this.setState({ searchQuery: value });
   };
 
   async componentDidMount() {
@@ -23,10 +25,17 @@ export default class App extends Component {
   }
 
   render() {
+    const filteredMovies = this.state.moviesList.filter((movie) => {
+      return (
+        movie.title
+          .toLowerCase()
+          .indexOf(this.state.searchQuery.toLowerCase()) !== -1
+      );
+    });
     return (
       <div>
         <SearchBar handleFormSubmit={this.handleFormSubmit} />
-        <CardList moviesList={this.state.moviesList} />{" "}
+        <CardList moviesList={filteredMovies} />
       </div>
     );
   }
