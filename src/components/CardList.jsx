@@ -12,7 +12,7 @@ export default function CardList(props) {
           <div className="card-body">
             <img
               src={`https://www.themoviedb.org/t/p/w220_and_h330_face/${movie.poster_path}`}
-              alt=""
+              alt={movie.title}
             />
             <div className="card-over">
               <h4 className="over-title">{movie.title}</h4>

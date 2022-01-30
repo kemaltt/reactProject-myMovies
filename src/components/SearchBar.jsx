@@ -21,7 +21,7 @@ export default class SearchBar extends Component {
   render() {
     return (
       <form className="form-container " onSubmit={this.handleSubmit}>
-        <div className="form-row d-flex justify-content-center p-5 ">
+        <div className="form-row d-flex justify-content-center m-0 p-5 ">
           <h1>Movies</h1>
           <div className="col-4 ">
             <input
@@ -29,7 +29,7 @@ export default class SearchBar extends Component {
               className="form-control ml-4 rounded-pill"
               placeholder="Search a movie"
               type="text"
-              // value={this.state.value}
+              value={this.state.value}
             />
           </div>
           <div className="col-1 ml-4">
