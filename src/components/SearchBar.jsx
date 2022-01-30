@@ -32,13 +32,13 @@ export default class SearchBar extends Component {
               // value={this.state.value}
             />
           </div>
-          {/* <div className="col-1">
+          <div className="col-1 ml-4">
             <input
               type="submit"
-              className="btn btn-md btn-primary"
+              className="btn btn-md btn-primary rounded-pill"
               value="Search"
             ></input>
-          </div> */}
+          </div>
         </div>
       </form>
     );
