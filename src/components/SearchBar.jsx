@@ -20,24 +20,30 @@ export default class SearchBar extends Component {
 
   render() {
     return (
-      <form className="form-container " onSubmit={this.handleSubmit}>
-        <div className="form-row d-flex justify-content-center m-0 p-5 ">
-          <h1>Movies</h1>
-          <div className="col-4 ">
+      <form
+        className="form-container d-flex justify-content-center align-items-center"
+        onSubmit={this.handleSubmit}
+      >
+        <div className="form-row d-flex justify-content-center align-items-center ">
+          <div className="header">
+            <h1>Movies</h1>
+          </div>
+
+          <div className="col-8 d-flex">
             <input
               onChange={this.handleInputChange}
-              className="form-control ml-4 rounded-pill"
+              className="form-control  "
               placeholder="Search a movie"
               type="text"
               value={this.state.value}
             />
-          </div>
-          <div className="col-1 ml-4">
-            <input
-              type="submit"
-              className="btn btn-md btn-primary rounded-pill"
-              value="Search"
-            ></input>
+            <div className="">
+              <input
+                type="submit"
+                className="btn btn-md btn-primary"
+                value="Search"
+              ></input>
+            </div>
           </div>
         </div>
       </form>
