@@ -17,7 +17,7 @@ export default class App extends Component {
 
   async componentDidMount() {
     const response = await axios.get(
-      "https://api.themoviedb.org/3/movie/popular?api_key=274c12e6e2e4f9ca265a01d107280eba&language=en-US&page=1"
+      `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1`
     );
     console.log(response.data.results);
 
